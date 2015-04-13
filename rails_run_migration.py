@@ -14,12 +14,7 @@ class NotMigration(Error):
   pass
 
 
-class RailsDownMigrationCommand(sublime_plugin.TextCommand):
-
-
-  def run(self, edit):
-    self.edit = edit
-    self.run_migration('down')
+class RailsMigrationCommand(sublime_plugin.TextCommand):
 
 
   def run_migration(self, direction):
@@ -74,3 +69,15 @@ class RailsDownMigrationCommand(sublime_plugin.TextCommand):
     new_file.set_scratch(True)
     new_file.set_read_only(True)
     return
+
+
+class RailsUpMigrationCommand(RailsMigrationCommand):
+  def run(self, edit):
+    self.edit = edit
+    self.run_migration('up')
+
+
+class RailsDownMigrationCommand(RailsMigrationCommand):
+  def run(self, edit):
+    self.edit = edit
+    self.run_migration('down')
