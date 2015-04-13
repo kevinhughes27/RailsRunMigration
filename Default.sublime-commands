@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "Rails Up Migration: Run the open migration",
+        "command": "rails_up_migration"
+    },
+    {
+        "caption": "Rails Down Migration: Rollback the open migration",
+        "command": "rails_down_migration"
+    }
+]
