@@ -23,12 +23,9 @@ eg.
 ```
 
 
-Setting up with chruby
-----------------------
+using with chruby
+-----------------
 
-see:
+to use with chruby start sublime from your terminal.
 
-https://github.com/postmodern/chruby/wiki/Sublime-Text
-(was this actually required?)
-
-note - you need to run sublime from your terminal. If you get errors about bundler and your ruby version try changing cmd to `ruby -v` to make sure Sublime is successfully forwarding through chruby.
+If you get errors about bundler and your ruby version try changing `cmd` to `ruby -v` to make sure Sublime is successfully forwarding through chruby.
